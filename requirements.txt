@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+requests
+pydantic
+python-dotenv
+langchain
+langchain-community
+langchain-core
+langchain-groq
+sentence-transformers
+PyMuPDF
