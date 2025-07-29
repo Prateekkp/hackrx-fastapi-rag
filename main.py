@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_groq import ChatGroq
 from langchain.chains.question_answering import load_qa_chain
@@ -34,7 +34,7 @@ class HackRxInput(BaseModel):
     questions: List[str]
 
 # === Embedding and LLM Setup ===
-embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/paraphrase-MiniLM-L3-v2")
 llm = ChatGroq(
     groq_api_key=GROQ_API_KEY,
     model_name="gemma2-9b-it",
